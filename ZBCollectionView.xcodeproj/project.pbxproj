@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC2090602180245D008AA6D8 /* hhCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC20905E2180245D008AA6D8 /* hhCollectionViewCell.m */; };
+		CC2090612180245D008AA6D8 /* hhCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC20905F2180245D008AA6D8 /* hhCollectionViewCell.xib */; };
+		CC2090642180610B008AA6D8 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2090632180610B008AA6D8 /* TwoViewController.m */; };
+		CC9E0A70217ECFCD0075FBD5 /* CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9E0A6F217ECFCD0075FBD5 /* CollectionView.m */; };
 		CCE62EC5217ECEAE00C7469F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE62EC4217ECEAE00C7469F /* AppDelegate.m */; };
 		CCE62EC8217ECEAE00C7469F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE62EC7217ECEAE00C7469F /* ViewController.m */; };
 		CCE62ECB217ECEAE00C7469F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE62EC9217ECEAE00C7469F /* Main.storyboard */; };
@@ -35,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC20905D2180245D008AA6D8 /* hhCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hhCollectionViewCell.h; sourceTree = "<group>"; };
+		CC20905E2180245D008AA6D8 /* hhCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hhCollectionViewCell.m; sourceTree = "<group>"; };
+		CC20905F2180245D008AA6D8 /* hhCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hhCollectionViewCell.xib; sourceTree = "<group>"; };
+		CC2090622180610B008AA6D8 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		CC2090632180610B008AA6D8 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		CC9E0A6E217ECFCD0075FBD5 /* CollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionView.h; sourceTree = "<group>"; };
+		CC9E0A6F217ECFCD0075FBD5 /* CollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionView.m; sourceTree = "<group>"; };
 		CCE62EC0217ECEAE00C7469F /* ZBCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE62EC3217ECEAE00C7469F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCE62EC4217ECEAE00C7469F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +92,8 @@
 		CCE62EB7217ECEAE00C7469F = {
 			isa = PBXGroup;
 			children = (
+				CC2090622180610B008AA6D8 /* TwoViewController.h */,
+				CC2090632180610B008AA6D8 /* TwoViewController.m */,
 				CCE62EC2217ECEAE00C7469F /* ZBCollectionView */,
 				CCE62EDB217ECEAE00C7469F /* ZBCollectionViewTests */,
 				CCE62EE6217ECEAE00C7469F /* ZBCollectionViewUITests */,
@@ -110,6 +123,11 @@
 				CCE62ECE217ECEAE00C7469F /* LaunchScreen.storyboard */,
 				CCE62ED1217ECEAE00C7469F /* Info.plist */,
 				CCE62ED2217ECEAE00C7469F /* main.m */,
+				CC9E0A6E217ECFCD0075FBD5 /* CollectionView.h */,
+				CC9E0A6F217ECFCD0075FBD5 /* CollectionView.m */,
+				CC20905D2180245D008AA6D8 /* hhCollectionViewCell.h */,
+				CC20905E2180245D008AA6D8 /* hhCollectionViewCell.m */,
+				CC20905F2180245D008AA6D8 /* hhCollectionViewCell.xib */,
 			);
 			path = ZBCollectionView;
 			sourceTree = "<group>";
@@ -238,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2090612180245D008AA6D8 /* hhCollectionViewCell.xib in Resources */,
 				CCE62ED0217ECEAE00C7469F /* LaunchScreen.storyboard in Resources */,
 				CCE62ECD217ECEAE00C7469F /* Assets.xcassets in Resources */,
 				CCE62ECB217ECEAE00C7469F /* Main.storyboard in Resources */,
@@ -265,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2090602180245D008AA6D8 /* hhCollectionViewCell.m in Sources */,
 				CCE62EC8217ECEAE00C7469F /* ViewController.m in Sources */,
 				CCE62ED3217ECEAE00C7469F /* main.m in Sources */,
+				CC2090642180610B008AA6D8 /* TwoViewController.m in Sources */,
+				CC9E0A70217ECFCD0075FBD5 /* CollectionView.m in Sources */,
 				CCE62EC5217ECEAE00C7469F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TP8TFRTM7H;
 				INFOPLIST_FILE = ZBCollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.fangwang.com.ZBCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TP8TFRTM7H;
 				INFOPLIST_FILE = ZBCollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.fangwang.com.ZBCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
