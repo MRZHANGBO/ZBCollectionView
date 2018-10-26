@@ -30,19 +30,20 @@
     if (wtag) {
         _wtag = wtag;
     }
+    [self setContentOffset:CGPointMake([UIScreen mainScreen].bounds.size.width*_wtag, 0 )];
 }
 -(void)setUI{
-    
     self.backgroundColor = [UIColor whiteColor];
     self.delegate = self;
     self.dataSource = self;
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
     self.bounces = YES;
-    self.contentSize = CGSizeMake(self.array.count * [UIScreen mainScreen].bounds.size.width, 0);
+    self.contentSize = CGSizeMake(_array.count * [UIScreen mainScreen].bounds.size.width, 0);
     self.pagingEnabled = YES;
+   [self setContentOffset:CGPointMake([UIScreen mainScreen].bounds.size.width*_wtag, 0 )];
+
 //    self.pageControl.currentPage = 0;
-    [self setContentOffset:CGPointMake([UIScreen mainScreen].bounds.size.width, 0 )];
 
     [self registerNib:[UINib nibWithNibName:@"hhCollectionViewCell"bundle:nil]forCellWithReuseIdentifier:@"collectionCellID"];
     
@@ -83,18 +84,19 @@
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    [self updateUserInterfaceWithScrollViewContentOffset:scrollView.contentOffset];
-}
-- (void)updateUserInterfaceWithScrollViewContentOffset:(CGPoint)contentOffset {
-
-    if (self.contentOffset.x >= CGRectGetWidth(self.frame) * 3 + 1) {
-        self.contentOffset = CGPointMake(CGRectGetWidth(self.frame), 0);
-    }else if (self.contentOffset.x == 0){
-        self.contentOffset = CGPointMake(CGRectGetWidth(self.frame)*3, 0);
-    }
-
-//    NSString *str = [NSString stringWithFormat:@"%ld/%ld",_currentIndex,_count];
-//    _contentView.text = str;
+//    [self updateUserInterfaceWithScrollViewContentOffset:scrollView.contentOffset];
+//}
+//- (void)updateUserInterfaceWithScrollViewContentOffset:(CGPoint)contentOffset {
+//
+//    if (self.contentOffset.x >= CGRectGetWidth(self.frame) * 3 + 1) {
+//        self.contentOffset = CGPointMake(CGRectGetWidth(self.frame), 0);
+//    }else if (self.contentOffset.x == 0){
+//        self.contentOffset = CGPointMake(CGRectGetWidth(self.frame)*3, 0);
+//    }
+//
+////    NSString *str = [NSString stringWithFormat:@"%ld/%ld",_currentIndex,_count];
+////    _contentView.text = str;
+//}
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     CGSize size = CGSizeMake([UIScreen mainScreen].bounds.size.width,200);
@@ -103,6 +105,9 @@
 //选中了哪一个
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
+    NSLog(@"选中了哪一个%ld-----%@",indexPath.row,self.array);
+    
+    
     if ([_CollectionDelegate respondsToSelector:@selector(ClickTag: AndWithData:)]) {
         [_CollectionDelegate ClickTag:indexPath.row AndWithData:self.array];
     }
@@ -112,7 +117,7 @@
     
 }
 -(void)refreshData{
-    [self setContentOffset:CGPointMake([UIScreen mainScreen].bounds.size.width*self.wtag, 0 )];
+
     [self reloadData];
 
 }

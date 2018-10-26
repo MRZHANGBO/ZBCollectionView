@@ -15,7 +15,9 @@
 @end
 
 @implementation ViewController
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
@@ -25,10 +27,10 @@
 
     CollectionView *collectionView = [[CollectionView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200) collectionViewLayout:layout];
     collectionView.CollectionDelegate = self;
-    self.array =@[@"2",@"0",@"1",@"2",@"0"];
+    self.array =@[@"0",@"1",@"2"];
     
     collectionView.array  = [NSMutableArray arrayWithArray:self.array];
-    collectionView.wtag = 4;
+    collectionView.wtag = 0;
     [self.view addSubview:collectionView];
     self.CollectView = collectionView;
     
@@ -53,16 +55,23 @@
     NSLog(@"第一个控制器-----------------%ld----------%lu",tag,(unsigned long)Data.count);
     TwoViewController *two = [[TwoViewController alloc]init];
     two.delegate = self;
-    two.Array = Data;
+    two.dataA = Data;
     two.gtag = tag;
     [self presentViewController:two animated:NO completion:nil];
 }
--(void)ClickTag:(NSInteger)tag{
+
+
+
+
+
+-(void)ClickTag:(NSInteger)tag andWith:(NSArray *)nest{
     self.CollectView.wtag = tag;
-    [self.CollectView refreshData];
+//    [self.CollectView.array removeAllObjects];
+    [self.CollectView reloadData];
     NSLog(@"第二个控制器传递过来的%ld",(long)tag);
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
